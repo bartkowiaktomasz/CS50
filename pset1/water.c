@@ -1,3 +1,7 @@
+/**
+ * Reports a user’s water usage, converting minutes spent in the shower to bottles of drinking water.
+ */
+
 #include <stdio.h>
 #include <cs50.h>
 
