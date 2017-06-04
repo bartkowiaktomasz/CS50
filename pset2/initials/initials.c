@@ -1,22 +1,23 @@
-// The program prints a person's initials, given their name as an input.
+/**
+ * Given a person’s name, prints a person’s initials. Does not accept characters other than alphabetical and whitespaces.
+ */
 
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>
+#include <ctype.h>
 
 int main(void){
-    string name = get_string(); // Get string as an input
-    if (name[0] != ' '){        // Print the first letter if it's not a whitespace
-        printf ("%c", name[0]);
+    printf("Your name: ");
+    string name = get_string();     // Get string as an input
+    string word = strtok(name, " ");
+    
+    while (word != NULL)
+    {
+        printf("%c", toupper(word[0]));
+        word  = strtok(NULL, " ");
     }
     
-    // Iterate through a string and print the first letter that appears after a series of whitespaces
-    for (int i = 0; i < strlen(name); i++){
-        if (name[i] == ' '){
-            if (name[i+1] != ' '){
-                printf ("%c", name[i+1]);
-            }
-        }
-    }
-    printf ("\n"); // New line
+    printf("\n");
+    return 0;
 }
