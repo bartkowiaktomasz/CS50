@@ -1,0 +1,19 @@
+0.  What is pneumonoultramicroscopicsilicovolcanoconiosis?
+    According to Merriam-Webster's Medical Dictionary, pneumonoultramicroscopicsilicovolcanoconiosis is a pneumoconiosis caused by inhalation of very fine silicate or quartz dust.
+1.  According to its man page, what does getrusage do?
+    Returns resource usage measures
+2.  Per that same man page, how many members are in a variable of type struct rusage?
+    16
+3.  Why do you think we pass before and after by reference (instead of by value) to calculate, even though we’re not changing their contents?
+    Copying whole structure takes time and memory
+4.  Explain as precisely as possible, in a paragraph or more, how main goes about reading words from a file. In other words, convince us that you indeed understand how that function’s for loop works.
+    Foor loop checks each work in a given texfile.
+    - At the beginning it checks if the character is alphabetic or an apostrophe. If yes, it iterates through all of the characters of the word
+      till it encounters character other than alphabetic or na apostrophe or if the length is greater than 45. 
+    - First "else if" skips through the words that contain numbers.
+    - Second "else if" checks if the word created by appending characters (at the beginning) to the string "word" finishes with "\0" (aka the end of string). 
+    - If yes, it adds one to the word counter, checks if it's misspelled, updates benchmark (getrusage), prints word if misspelled and starts looking for a next word.
+5.  Why do you think we used fgetc to read each word’s characters one at a time rather than use fscanf with a format string like "%s" to read whole words at a time? Put another way, what problems might arise by relying on fscanf alone?
+    fscanf doesn't have the ability to discard words that are longer than 45 characters or aren't made of only alphabetical characters or apostrophes.
+6.  Why do you think we declared the parameters for check and load as const (which means "constant")?
+    The functions are not supposed to change those words.
