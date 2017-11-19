@@ -1,7 +1,7 @@
 ### Introduction to C
 
 ###### Hello
-Implement a program that prints out "hello, world"
+Implement a program that prints out "hello, world".
 ```
 $ ./hello
 hello, world
