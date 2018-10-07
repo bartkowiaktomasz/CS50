@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Transaction type</th>
+                <th>Transacted</th>
+            </tr>
+            {% for transaction in transactions %}
+            <tr>
+                <th>{{ transaction.share }}</th>
+                <th>{{ transaction.amount }}</th>
+                <th>${{ '%.2f' % transaction.price }}</th>
+                <th>{{ transaction.transaction_type }}</th>
+                <th>{{ transaction.time }}</th>
+            </tr>
+            {% endfor %}
+        </thead>
+    </table>
+{% endblock %}
