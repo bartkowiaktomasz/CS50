@@ -3,7 +3,7 @@
 This repository contains solutions for the problem sets at Computer Science 50 (CS50) Harvard course.
 All solutions received scores of 100%.
 
-## Problem Sets 
+## Problem Sets
 | Problem set | Description | Language |
 | --- | --- | --- |
 | Problem Set 1 | Introduction to C | C |
@@ -12,3 +12,4 @@ All solutions received scores of 100%.
 | Problem Set 4 | Forensics (image recovery) | C |
 | Problem Set 5 | Mispellings (spell checker) | C |
 | Problem Set 6 | Sentiments (sentiment analysis on Twitter) | Python |
+| Problem Set 7 | Finance | Python (Flask) |

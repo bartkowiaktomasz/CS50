@@ -1,4 +1,5 @@
 # API KEY: XC8831435YLHUM5A
+# export API_KEY=XC8831435YLHUM5A
 import os
 import time
 
@@ -56,8 +57,13 @@ def index():
         result = lookup(stock["share"])
         if result is not None:
             price = result["price"]
+            total = price*stock["amount"]
             db.execute("UPDATE portfolio SET price=:price, total=:total WHERE id=:user_id AND share=:share",
-                        price=price, total=price*stock["amount"], user_id=session["user_id"], share=stock["share"])
+                        price=price, total=total, user_id=session["user_id"], share=stock["share"])
+
+    # Update stocks
+    stocks = db.execute("SELECT * FROM portfolio WHERE id=:user_id",
+                   user_id=session["user_id"])
 
     transactions = db.execute("SELECT transaction_id FROM portfolio WHERE id=:user_id", user_id=session["user_id"])
     portfolio_value = 0
@@ -246,7 +252,8 @@ def register():
             rows = db.execute("SELECT * FROM users WHERE username = :username",
                       username=request.form.get("username"))
             session["user_id"] = rows[0]["id"]
-            return redirect("/", code=200)
+
+        return redirect("/", code=200)
     else:
         return render_template("register.html", code=200)
 

@@ -25,13 +25,13 @@
                 <th>CASH</th>
                 <th></th>
                 <th></th>
-                <th>${{ '%.2f' % cash}}</th>
+                <th>{{ "${:,.2f}".format(cash) }}</th>
             </tr>
             <tr>
                 <th></th>
                 <th></th>
                 <th></th>
-                <th><b>${{ '%.2f' % total_value}}</b></th>
+                <th><b>{{ "${:,.2f}".format(total_value) }}</b></th>
             </tr>
         </thead>
     </table>
