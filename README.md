@@ -12,5 +12,5 @@ All solutions received scores of 100%.
 | Problem Set 4 | Forensics (image recovery) | C |
 | Problem Set 5 | Mispellings (spell checker) | C |
 | Problem Set 6 | Sentiments (sentiment analysis on Twitter) | Python |
-| Problem Set 7 | Finance | Python (Flask) |
-| Problem Set 8 | Mashup | Python (Flask), JavaScript (jQuery)  |
+| Problem Set 7 | Finance | Python (Flask), SQL |
+| Problem Set 8 | Mashup | Python (Flask), SQL, JavaScript (jQuery)  |
