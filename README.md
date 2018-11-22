@@ -1,6 +1,6 @@
 # Introduction to Computer Science: HarvardX CS50
 
-This repository contains solutions for the problem sets at Computer Science 50 (CS50) Harvard course.
+This repository contains solutions for the problem sets at [Computer Science 50 (CS50)](https://www.edx.org/es/course/cs50s-introduction-computer-science-harvardx-cs50x) Harvard course.
 All solutions received scores of 100%.
 
 ## Problem Sets
